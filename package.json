@@ -1,5 +1,5 @@
 {
-  "name": "malabares_asinc",
+  "name": "LearnyounodeJS",
   "version": "1.0.0",
   "description": "Project demonstrating TDD with TypeScript and Jest for a debounce function",
   "main": "index.js",
