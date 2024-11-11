@@ -14,8 +14,8 @@ import { suma } from './learnyounode';
 
 describe('Baby Steps', () => {
     beforeAll(() => {
-        // Establece los argumentos de la línea de comandos antes de la prueba
-        process.argv = ['node', 'tuArchivo.js', '1', '2', '3', '4']; // Cambia 'tuArchivo.js' por el nombre correcto.
+       
+        process.argv = ['node', 'tuArchivo.js', '1', '2', '3', '4']; 
     });
 
     test('debería sumar los números pasados como argumentos', () => {
@@ -204,7 +204,7 @@ describe('Juggling Async', () => {
     test('debería hacer tres solicitudes HTTP y registrar las respuestas', (done) => {
       const mockResponses = ['Response 1', 'Response 2', 'Response 3'];
   
-      // Intercepta las llamadas HTTP con nock y responde con datos de prueba
+     
       nock('http://example.com')
         .get('/1')
         .reply(200, mockResponses[0])
@@ -213,24 +213,24 @@ describe('Juggling Async', () => {
         .get('/3')
         .reply(200, mockResponses[2]);
   
-      // Espía en console.log para verificar las respuestas
+      
       const consoleLogSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
   
-      // Llama a la función y procesa las respuestas
+     
       jugglingAsync((responses) => {
         responses.forEach((response, index) => {
           console.log(response);
         });
   
-        // Verifica que console.log haya sido llamado con las respuestas esperadas
+        
         expect(consoleLogSpy).toHaveBeenCalledWith(mockResponses[0]);
         expect(consoleLogSpy).toHaveBeenCalledWith(mockResponses[1]);
         expect(consoleLogSpy).toHaveBeenCalledWith(mockResponses[2]);
   
-        // Restaura console.log
+       
         consoleLogSpy.mockRestore();
   
-        done(); // Finaliza el test
+        done(); 
       });
     });
   });
@@ -254,12 +254,12 @@ describe('Time Server', () => {
             };
         });
 
-        process.argv = ['node', 'tuArchivo.js', '12345']; // Cambia 'tuArchivo.js' por el nombre correcto.
+        process.argv = ['node', 'tuArchivo.js', '12345']; 
 
         datenow();
 
         setImmediate(() => {
-            expect(mockSocket.end).toHaveBeenCalledWith(expect.stringMatching(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}\n$/)); // Comprobar el formato de la fecha
+            expect(mockSocket.end).toHaveBeenCalledWith(expect.stringMatching(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}\n$/)); 
             done();
         });
     });
@@ -289,7 +289,7 @@ describe('HTTP File Server', () => {
             return mockServer;
         });
 
-        process.argv = ['node', 'tuArchivo.js', '12345', 'test.txt']; // Cambia 'tuArchivo.js' por el nombre correcto.
+        process.argv = ['node', 'tuArchivo.js', '12345', 'test.txt']; 
 
         FileServer();
 
@@ -318,7 +318,7 @@ describe('HTTP Uppercaserer', () => {
             return { listen: jest.fn() };
         });
 
-        process.argv = ['node', 'tuArchivo.js', '12345']; // Cambia 'tuArchivo.js' por el nombre correcto.
+        process.argv = ['node', 'tuArchivo.js', '12345']; 
 
         uppercaserer();
 
@@ -349,7 +349,7 @@ describe('HTTP Json API Server', () => {
             return { listen: jest.fn() };
         });
 
-        process.argv = ['node', 'tuArchivo.js', '12345']; // Cambia 'tuArchivo.js' por el nombre correcto.
+        process.argv = ['node', 'tuArchivo.js', '12345']; 
 
         API();
 

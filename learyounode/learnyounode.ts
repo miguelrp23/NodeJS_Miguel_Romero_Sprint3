@@ -28,10 +28,10 @@ export {suma}
  import { contarPalabras } from "./contar";
   export function leer() {
   
-      const archivo =("this is a name"); // Lee el archivo como texto
-      console.log('Contenido del archivo:', archivo); // Depuración
-      const numeroDePalabras = contarPalabras(archivo); // Cuenta las palabras usando la función contarPalabras
-      console.log(numeroDePalabras); // Imprime el número de palabras
+      const archivo =("this is a name"); 
+      console.log('Contenido del archivo:', archivo); 
+      const numeroDePalabras = contarPalabras(archivo); 
+      console.log(numeroDePalabras); 
     
    
  }
@@ -204,7 +204,7 @@ export function datenow(){
       }
       
      
-      const server = net.createServer(function (socket: any) { //tiene callback y un socket
+      const server = net.createServer(function (socket: any) { 
         socket.end(now() + '\n')
       })
       
