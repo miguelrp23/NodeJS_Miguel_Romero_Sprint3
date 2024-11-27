@@ -16,10 +16,9 @@ Estos ejercicios son de learnyounode, aqui esta pasado a typescript con sus test
    bash
    git clone https://github.com/tu-usuario/tu-repositorio.git
 
-2. instalacion del jest con el comando "npm install --save-dev jest"
+2. con los comandos learnyounode ves los ejercicicios que puedes hacer 
+   y para verificarlos se pone learyounode verify "el archivo.ts" que quieres verificar
+   comprueba que existe en el repositorio
 
-3. con el comando "npm test" ejecutas los test que tiene el codigo,
-   se ejecutaran correctamente si tienes el jest instalado 
-
-5. teniendo todo esto se podra ejecutar todo el codigo correctamente 
+2. teniendo todo esto se podra ejecutar todo el codigo correctamente 
    

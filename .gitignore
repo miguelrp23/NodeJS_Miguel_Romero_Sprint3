@@ -1,0 +1,4 @@
+modular/
+# Keep environment variables out of version control
+jest.config.js
+node_modules
