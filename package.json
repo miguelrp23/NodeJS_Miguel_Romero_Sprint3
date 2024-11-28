@@ -19,6 +19,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "bl": "^6.0.16"
+    "bl": "^6.0.16",
+    "through2-map": "^4.0.0"
   }
 }
